@@ -2,12 +2,12 @@
 export default function Navbar(){
 return(
    
-<div className="bg-purple-500 display flex flex-row justify-evenly  text-white font-bold ">
+<div className="bg-purple-500 display flex flex-col md:flex-row justify-center md:justify-evenly  text-white font-bold ">
         <div className="text-white font-bold text-4xl p-3">KRISP</div>
-        <div className="flex flex-row">
+        <div className="flex flex-col  md:flex-row">
         <button
           type="button"
-          className="hidden md:block mr-[30px] "
+          className="  mr-[30px] "
           onClick={(event) => {
             router.push(`/`);
           }}
@@ -16,7 +16,7 @@ return(
         </button>
         <button
           type="button"
-          className="hidden md:block mr-[30px] "
+          className=" mr-[30px] "
           onClick={(event) => {
             router.push(`/create`);
           }}
@@ -25,7 +25,7 @@ return(
         </button>
         <button
           type="button"
-          className="hidden md:block mr-[30px] "
+          className=" mr-[30px] "
           onClick={(event) => {
             router.push(`/poster`);
           }}
@@ -34,7 +34,7 @@ return(
         </button>
         <button
           type="button"
-          className="hidden md:block mr-[30px] "
+          className=" mr-[30px] "
           onClick={(event) => {
             router.push(`/history`);
           }}
@@ -44,7 +44,7 @@ return(
         </div>
         <button 
           type="button"
-          className="hidden md:block mr-[30px] "
+          className=" mr-[30px] "
           onClick={(event) => {
             router.push(`/profile`);
           }}

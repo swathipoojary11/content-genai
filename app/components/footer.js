@@ -2,7 +2,7 @@
 export default function Footer(){
     return(
         <div className="flex flex-col text-white mt-[150px] max-w-full  justify-evenly bg-purple-800">
-        <div className="flex flex-row text-white mt-[160px] max-w-full  justify-evenly">
+        <div className="flex  flex-col md:flex-row text-white md:mt-[160px] max-w-full  justify-evenly">
           <div className="  text-white mt-10 text-lg  ">
             {" "}
             <span className="text-purple-500 mt-10 text-3xl font-bold">

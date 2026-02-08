@@ -1,28 +1,28 @@
 "use client";
 import { useRouter } from "next/navigation";
-
+import Footer from "./components/footer";
 export default function Home() {
   const router = useRouter();
   return (
-    <div className="bg-black min-h-screen w-full  ">
-      <div className="justify-center items-center flex flex-col">
-        <div className=" p-7 text-white text-6xl">
+    <div className="bg-black min-h-screen overflow-x-hidden w-full  ">
+      <div className="justify-center items-center flex flex-col ">
+        <div className=" p-7 text-white  text-4xl md:text-6xl font-medium">
           {" "}
           Welcome to,<br></br>{" "}
-          <span className="text-purple-500 font-extrabold text-9xl">KRISP</span>
+          <span className="text-purple-500 font-extrabold md:text-9xl">KRISP</span>
           <p></p>
         </div>
 
         {/*Button for login and sign up */}
-        <div className=" flex flex-col  justify-center w-full h-auto items-center">
+        <div className=" flex flex-col  justify-center w-full h-auto mt-12 gap-4 items-center">
           <button
-            className="bg-purple-500 text-white border-1 border-white rounded-3xl h-[100px] w-1/2 p-3 "
+            className="bg-purple-500 text-white border-1 border-white rounded-3xl  h-[60px] md:h-[100px] w-full md:w-1/2 p-3 "
             onClick={() => router.push("/signup")}
           >
             Signup
           </button>
           <button
-            className="bg-violet-950 text-white border-1 border-white rounded-3xl h-[100px] w-1/2 p-3 mt-3 "
+            className="bg-violet-950  text-white border-1 border-white rounded-3xl  h-[60px] md:h-[100px] w-full md:w-1/2 p-3 "
             onClick={() => router.push("/login")}
           >
             Login{" "}
@@ -30,8 +30,8 @@ export default function Home() {
         </div>
       </div>
       {/*Discription of KRISP */}
-      <div className="flex flex-col text-white mt-[150px] border-2 rounded-2xl border-purple-500 p-4 flex-wrap w-1/2">
-        <div className="  text-purple-500 mt-10 text-3xl font-bold ">
+      <div className="flex flex-col text-white mt-[150px]  border-2 rounded-2xl border-purple-500 p-4 flex-wrap w-full md:w-1/2">
+        <div className="  text-purple-500 mt-10 text-3xl font-bold  ">
           KINETIC ENGINE
         </div>
         <div className="text-lg mt-5 font-medium text-justify ">
@@ -53,7 +53,7 @@ export default function Home() {
           death of hesitation and the birth of instant relevance.
         </div>
       </div>
-      <div className="flex flex-col text-white mt-[150px] border-2 rounded-2xl border-purple-500 p-4 flex-wrap w-1/2  ml-auto">
+      <div className="flex flex-col text-white mt-[150px] border-2 rounded-2xl border-purple-500 p-4 flex-wrap md:w-1/2  md:ml-auto">
         <div className="  text-purple-500 mt-10 text-3xl font-bold ">
           RECURSIVE SYNDICATION
         </div>
@@ -76,7 +76,7 @@ export default function Home() {
           for your audience.
         </div>
       </div>
-      <div className="flex flex-col text-white mt-[150px] border-2 rounded-2xl border-purple-500 p-4 flex-wrap w-1/2">
+      <div className="flex flex-col text-white mt-[150px] border-2 rounded-2xl border-purple-500 p-4 flex-wrap md:w-1/2">
         <div className="  text-purple-500 mt-10 text-3xl font-bold ">
           INTELLIGENT SYNTHESIS
         </div>
@@ -98,13 +98,13 @@ export default function Home() {
           reward. It is the perfect fusion of your soul and our silicon.
         </div>
       </div>
-      <div className="flex flex-col text-white mt-[150px] border-2 rounded-2xl border-purple-500 p-4 flex-wrap w-1/2 ml-auto">
+      <div className="flex flex-col text-white mt-[150px] border-2 rounded-2xl border-purple-500 p-4 flex-wrap md:w-1/2 ml-auto">
         <div className="  text-purple-500 mt-10 text-3xl font-bold ">
           SEAMLESS PIPELINE
         </div>
         <div className="text-lg mt-5 font-medium text-justify ">
           The S defines the Seamless Pipeline, the zero-click philosophy that
-          anchors the entire user experience. We have systematically eliminated
+          anchors the entire user experience. We have systematically eliminate
           the technical friction and admin work that kills creative flow. Once
           the synthesis is complete, the Pipeline moves your content through an
           automated, multi-point Quality Control check—optimizing aspect ratios,
@@ -119,7 +119,7 @@ export default function Home() {
           thrives. You provide the spark, and the pipeline builds the fire
         </div>
       </div>
-      <div className="flex flex-col text-white mt-[150px] border-2 rounded-2xl border-purple-500 p-4 flex-wrap w-1/2">
+      <div className="flex flex-col text-white mt-[150px] border-2 rounded-2xl border-purple-500 p-4 flex-wrap md:w-1/2">
         <div className="  text-purple-500 mt-10 text-3xl font-bold ">
           PREDICTIVE PRESENCE
         </div>
@@ -139,70 +139,7 @@ export default function Home() {
           legacy becomes a self-sustaining entity that grows in your absence.
         </div>
       </div>
-      <div className="flex flex-col text-white mt-[150px] max-w-full  justify-evenly bg-purple-800">
-        <div className="flex flex-row text-white mt-[160px] max-w-full  justify-evenly">
-          <div className="  text-white mt-10 text-lg  ">
-            {" "}
-            <span className="text-purple-500 mt-10 text-3xl font-bold">
-              About
-            </span>
-            <ul>Why KRISP</ul>
-            <ul>About Us</ul>
-            <ul>Careers</ul>
-            <ul>Leadership</ul>
-            <ul>Customers</ul>
-            <ul>Contact Us</ul>
-          </div>
-          <div className="  text-white mt-10 text-lg  ">
-            {" "}
-            <span className="text-purple-500 mt-10 text-3xl font-bold">
-              {" "}
-              Product Features
-            </span>
-            <ul>Publish </ul>
-            <ul>Engage</ul>
-            <ul>Monitor</ul>
-            <ul>Analyse</ul>
-          </div>
-          <div className="  text-white mt-10 text-lg  ">
-            <span className="text-purple-500 mt-10 text-3xl font-bold">
-              {" "}
-              Guides
-            </span>
-
-            <ul>Blog</ul>
-            <ul>Help Center</ul>
-            <ul>Community</ul>
-            <ul>Events</ul>
-            <ul>Security</ul>
-            <ul>Privacy</ul>
-            <ul>Social media marketing </ul>
-            <ul>Autopost</ul>
-            <ul>Content Strategy</ul>
-            <ul>Content Creation</ul>
-            <ul>Content Distribution</ul>
-            <ul>Content Analytics</ul>
-          </div>
-          <div className="  text-white mt-10 text-lg  ">
-            <span className="text-purple-500 mt-10 text-3xl font-bold">
-              {" "}
-              Resources
-            </span>
-            <ul>Documentation</ul>
-            <ul>API Reference</ul>
-            <ul>Developer Tools</ul>
-            <ul>System Status</ul>
-            <ul>Release Notes</ul>
-            <ul>Support</ul>
-            <ul>Contact Support</ul>
-            <ul>Report a Bug</ul>
-            <ul>Request a Feature</ul>
-          </div>
-        </div>
-        <div className="flex  bg-purple-950 px-4 py-2 justify-center ">
-          <div>© 2026 Hootsuite Inc. All Rights Reserved.</div>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }

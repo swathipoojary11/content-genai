@@ -7,10 +7,10 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const router = useRouter();
   return (
-    <div className="bg-white flex flex-row justify-center items-center min-h-screen w-full p-3">
+    <div className="overflow-x-hidden bg-white flex  flex-col md:flex-row justify-center items-center min-h-screen w-full p-3">
       <img
         src="https://plus.unsplash.com/premium_photo-1664304409780-6d31241e9058?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b3dsfGVufDB8fDB8fHww"
-        className="w-[100%] h-[700px] rounded-3xl"
+        className=" w-[100%] h-[700px] rounded-3xl"
       />
       
       <div className="flex flex-col mt-[2] h-1/2 w-full p-10  ">
@@ -20,14 +20,14 @@ export default function LoginPage() {
           placeholder="Email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
-          className="border-2 border-purple-500  m-[40px] h-15 rounded-3xl p-2 "
+          className="border-2 border-purple-500  md:m-[40px] h-15 rounded-3xl p-2 "
         />
         <input
           type="password"
           placeholder="xxxxxx"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
-          className="border-2 m-[40px] border-purple-500  h-15 rounded-3xl p-2 mt-5"
+          className="border-2 md:m-[40px] border-purple-500  h-15 rounded-3xl p-2 mt-5"
         />
       
       <div className="flex flex-row justify-between">
