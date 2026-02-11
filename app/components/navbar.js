@@ -1,5 +1,7 @@
 "use client"
+import { useRouter } from "next/navigation";
 export default function Navbar(){
+  const router = useRouter();
 return(
    
 <div className="bg-purple-500 display flex flex-col md:flex-row justify-center md:justify-evenly  text-white font-bold ">
@@ -9,7 +11,7 @@ return(
           type="button"
           className="  mr-[30px] "
           onClick={(event) => {
-            router.push(`/`);
+            router.push(`/dashboard`);
           }}
         >
           Home
@@ -18,7 +20,7 @@ return(
           type="button"
           className=" mr-[30px] "
           onClick={(event) => {
-            router.push(`/create`);
+            router.push(`/generateContent`);
           }}
         >
           Generator
@@ -27,7 +29,7 @@ return(
           type="button"
           className=" mr-[30px] "
           onClick={(event) => {
-            router.push(`/poster`);
+            router.push(`/scheduler`);
           }}
         >
           Poster
@@ -36,7 +38,7 @@ return(
           type="button"
           className=" mr-[30px] "
           onClick={(event) => {
-            router.push(`/history`);
+            router.push(`/scheduler`);
           }}
         >
           History

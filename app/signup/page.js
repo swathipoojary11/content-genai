@@ -1,6 +1,8 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { db } from "../lib/firebase";
+import { doc, setDoc } from "firebase/firestore";
 import { Login, createAccount } from "../core/auth";
 export default function LoginPage() {
   const router = useRouter();
@@ -14,7 +16,14 @@ export default function LoginPage() {
       return;
     }
     try{
-    await createAccount(email, password);
+
+   // await createAccount(email, password);
+   //im addin  this code const 
+   const userCredential= await createAccount(email, password);
+   await setDoc(doc(db,"users",userCredential.user.uid),{
+    name:name,email:email,createdAt:new Date()
+   });
+   //
     router.push("/login");
   }catch(error){
     alert(error.message);
@@ -62,11 +71,9 @@ export default function LoginPage() {
         <div className="flex flex-row justify-between">
           <button
             onClick={handleSignup}
-            className="text-yellow-400  bg-purple-800 w-full md:w-[200px] p-4 mt-5"
-          >
+            className="text-yellow-400  bg-purple-800 w-full md:w-[200px] p-4 mt-5">
             Create Account
           </button>
-          
         </div>
       </div>
     </div>
