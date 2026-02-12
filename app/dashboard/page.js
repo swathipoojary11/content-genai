@@ -5,6 +5,8 @@ import { useAuth } from "../core/Authcontext";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { db } from "../lib/firebase";
+
+ 
 import { doc, getDoc } from "firebase/firestore";
 export default function DashboardPage() {
   const { user, loading } = useAuth();
@@ -102,12 +104,12 @@ export default function DashboardPage() {
       <div className="flex flex-row bg-purple-100 rounded-3xl md:w-[70%] h-[500px]    mt-20 flex-wrap">
         <div className=" font-bold    bg-[url('https://www.shutterstock.com/shutterstock/videos/3834761799/thumb/4.jpg?ip=x480')] bg-cover bg-center rounded-3xl w-full justify-center items-center flex text-4xl md:text-6xl  text-purple-600 ">
           {" "}
-          Content Library
+          AI calender
           <button
             className="h-[50px] w-[200px] border-2 rounded-2xl bg-purple-800  text-white font-bold p-3 m-10 text-sm"
             type="button"
             onClick={(event) => {
-              router.push(`/scheduler`);
+              router.push(`/calender`);
             }}
           >
             Get started
